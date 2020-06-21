@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function Parent(name) {
+      this.name = name
+      this.sex = 'boy'
+      this.colors = ['white', 'black']
+    }
+
+    function Child(name) {
+      this.name = name
+      this.feature = ['cute']
+    }
+
+    const parent = new Parent('parent')
+
+    Child.prototype = parent
+
+    const child1 = new Child('child1')
+
+    child1.sex = 'girl'
+    // child1.colors = ['test']
+    child1.colors.push('yellow')
+    child1.feature.push('sunshine')
+
+    const child2 = new Child('child2')
+    child2.feature.push('rain')
+
+    console.log(child1.name)
+    console.log(child1.colors)
+    console.log(child1.feature)
+
+    console.log(child2.colors)
+    console.log(child2.feature)
+    console.log(parent)
+  </script>
+</body>
+
+</html>

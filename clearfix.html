@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .content{
+      border: 1px salmon solid;
+      width: 500px;
+      /* overflow: hidden; */
+    }
+
+    .content img{
+      float: left;
+    }
+
+    .content p{
+      float: left;
+    }
+
+    .clearfix::after{
+      content: '';
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+    }
+
+    .clear{
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <img src="./test1.jpg" alt="" srcset="" width="100px" height="100px">
+    <p>你好，我是李磊</p>
+    <div class="clear"></div>
+  </div>
+</body>
+</html>
